@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6A6A674-78E4-4E91-B741-3CFCE988931E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebWeixin</RootNamespace>
+    <AssemblyName>WebWeixin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\LoginQrcode.cs" />
+    <Compile Include="Api\LoginUuid.cs" />
+    <Compile Include="Api\WebwxSyncCheck.cs" />
+    <Compile Include="Api\WebwxGetContact.cs" />
+    <Compile Include="Api\WebwxInit.cs" />
+    <Compile Include="Api\WebwxSendMsg.cs" />
+    <Compile Include="Api\WebwxStatReport.cs" />
+    <Compile Include="Api\WebwxStatusNotify.cs" />
+    <Compile Include="Api\WebwxSync.cs" />
+    <Compile Include="Api\WebwxUploadMedia.cs" />
+    <Compile Include="Models\AjaxResult.cs" />
+    <Compile Include="Models\AppInfo.cs" />
+    <Compile Include="Models\BaseResponse.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MPArticle.cs" />
+    <Compile Include="Models\MPSubscribeMsg.cs" />
+    <Compile Include="Models\MsgInfo.cs" />
+    <Compile Include="Models\ProfileInfo.cs" />
+    <Compile Include="Models\MsgRecommendInfo.cs" />
+    <Compile Include="Models\SendMsgInfo.cs" />
+    <Compile Include="Models\SendMsgResult.cs" />
+    <Compile Include="Models\SyncKey.cs" />
+    <Compile Include="Models\UploadInfo.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Api\WebwxBatchGetContact.cs" />
+    <Compile Include="Models\WebwxContactInfo.cs" />
+    <Compile Include="Models\WebwxInitInfo.cs" />
+    <Compile Include="Models\WebwxStatusNotifyInfo.cs" />
+    <Compile Include="Models\LoginXmlResult.cs" />
+    <Compile Include="Models\WebwxSyncInfo.cs" />
+    <Compile Include="Utils\Http.cs" />
+    <Compile Include="Utils\Tools.cs" />
+    <Compile Include="Utils\WebClientExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeiXinSdk.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
